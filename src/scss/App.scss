@@ -1,15 +1,19 @@
+// @import '/font-awesome-4.7.0/scss/font-awesome.scss';
+
 @font-face {
-  font-family: 'Vibur';
-  font-style: cursive;
-  font-weight: 400;
-  src: local("Vibur"), local("Vibur"), format("ttf"); }
+font-family: 'Vibur';
+font-style: cursive;
+font-weight: 400;
+src: local('Vibur'), local('Vibur'), format('ttf');
+}
 
 .jumbotron {
   background-color: #101823;
   margin: 0 auto;
   max-width: 97%;
   max-height: 97vh;
-  padding: 0; }
+  padding: 0;
+}
 
 .img-responsive.home-img {
   zoom: 2;
@@ -18,7 +22,8 @@
   margin: auto;
   border-radius: 4px;
   height: auto;
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 .btn-primary-outline {
   background-color: #fcf8e3;
@@ -26,7 +31,8 @@
   border-color: #ffffff;
   top: 88vh;
   left: 48vw;
-  position: absolute; }
+  position: absolute;
+}
 
 .article-title {
   color: #fcf8e3;
@@ -34,11 +40,14 @@
   font-size: 56px;
   top: 75vh;
   left: 20vw;
-  position: absolute; }
+  position: absolute;
+}
 
 .example-appear {
   opacity: 0.01;
-  transition: opacity .9s ease-in; }
+  transition: opacity .9s ease-in;
+}
 
 .example-appear.example-appear-active {
-  opacity: 1; }
+  opacity: 1;
+}

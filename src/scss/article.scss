@@ -1,0 +1,56 @@
+.flex-button {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+}
+
+.flex-child {
+  margin: 0 0 0 20px;
+  color: #777777;
+  background-color: transparent;
+  border: 2px solid #777777;
+  border-radius: 4px;
+  }
+
+.list-group-item {
+  padding: 10px;
+  margin-top: 20px;
+  overflow: auto;
+}
+
+.effect8{
+  -webkit-box-shadow: 0px 3px 12px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 12px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 12px -2px rgba(0,0,0,0.75);
+}
+
+.list-img {
+  max-width: 140px;
+  float: left;
+  padding: 0 10px 0 0;
+}
+
+.list-group-item-text {
+  padding: 0 0 0 0;
+}
+
+.big-container {
+  background-color: white;
+  height: auto;
+  padding: 0 200px 0 200px;
+}
+
+.date-smaller {
+  font-size: 10px;
+  color: #82868c;
+}
+
+.img-1 {
+  border-radius: 4px;
+}
+
+.img-2 {
+  padding: 0 0 0px 0;
+  border-radius: 4px;
+}

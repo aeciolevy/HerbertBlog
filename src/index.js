@@ -9,7 +9,12 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 import './styles/index.css';
 
 
-import App from './components/App';
+import App from './pages/App';
+import About from './pages/about';
+import Article from './pages/article';
+import ArticleRead from './pages/article-read';
+import Books from './pages/books';
+import Videos from './pages/videos';
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
@@ -19,6 +24,11 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={App} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/article" component={Article} />
+        <Route exact path="/article/:articleId" component={ArticleRead} />
+        <Route exact path="/books" component={Books} />
+        <Route exact path="/videos" component={Videos} />
       </Switch>
     </BrowserRouter>
   </Provider>
