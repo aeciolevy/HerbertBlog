@@ -135,10 +135,11 @@
   color: #82868c; }
 
 .img-1 {
+  margin: 20px 0 20px 0;
   border-radius: 4px; }
 
 .img-2 {
-  padding: 0 0 0px 0;
+  margin: 20px 0 0 0;
   border-radius: 4px; }
 
 .book1, .book2, .book3 {
@@ -147,13 +148,17 @@
 
 .video-detail .details {
   margin-top: 10px;
+  color: #777777;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px; }
 
-.video-detail {
-  width: 50%;
-  margin: 0 auto; }
+.list-group-item.videos {
+  cursor: pointer;
+  margin-top: 0; }
+
+.list-group-item:hover {
+  background-color: #eee; }
 
 .navbar-custom {
   background-color: #101823;

@@ -38,8 +38,9 @@
   color: #82868c; }
 
 .img-1 {
+  margin: 20px 0 20px 0;
   border-radius: 4px; }
 
 .img-2 {
-  padding: 0 0 0px 0;
+  margin: 20px 0 0 0;
   border-radius: 4px; }

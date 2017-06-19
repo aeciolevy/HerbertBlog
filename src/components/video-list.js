@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import VideoListItem from './video-list-item';
 
 
-const videosTags = {
-  logistica1: 'LYhm2oSk5z4',
-  logistica2: 'dDhQcHiPrNc',
-  manutencao1: '5MGlXW8zWYE',
-  manutencao2: 'C6_cgGv1_gQ',
-  lideranca1: 'NpwcGyTo0UA',
-  geral1: 'Vu-TNHhofxY'
+
+class VideoList extends Component {
+
+render() {
+  const videoItems = this.props.video.map( video => {
+    console.log(video)
+    return (
+      <VideoListItem
+       key={video.etag}
+        video={video} />
+      );
+  })
+  return (
+      <ul className="col-md-4 list-group">
+     {videoItems}
+      </ul>
+      );
+  }
 }
 
-
-const VideoList = (props) => {
-
-return (
-    <ul className="col-md-4 list-group">
-      {videoItems}
-    </ul>
-    );
+function mapStateToProps({ video }) {
+  return { video };
 }
-
-export default VideoList;
+export default connect(mapStateToProps)(VideoList);

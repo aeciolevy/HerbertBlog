@@ -22,7 +22,7 @@ const Navbar = (props) => {
             <Link to="/books"> Livros </Link>
           </li>
           <li className="active">
-            <Link to="/about"> Mural </Link>
+            <Link to="/album"> Mural </Link>
           </li>
           <li className="active">
             <Link to="/videos"> Videos </Link>

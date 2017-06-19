@@ -1,11 +1,18 @@
+
 .video-detail .details{
   margin-top: 10px;
+  color: #777777;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.video-detail {
-  width: 50%;
-  margin: 0 auto;
+.list-group-item.videos {
+  cursor: pointer;
+  margin-top: 0;
 }
+
+.list-group-item:hover {
+  background-color: #eee;
+}
+
