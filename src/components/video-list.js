@@ -4,15 +4,15 @@ import VideoListItem from './video-list-item';
 
 
 
-class VideoList extends Component {
+const VideoList = (props) => {
 
-render() {
-  const videoItems = this.props.video.map( video => {
+  const videoItems = props.video.map( video => {
     console.log(video)
     return (
       <VideoListItem
-       key={video.etag}
-        video={video} />
+        key={video.etag}
+        video={video}
+        onVideoClick={props.onVideoClick} />
       );
   })
   return (
@@ -21,7 +21,7 @@ render() {
       </ul>
       );
   }
-}
+
 
 function mapStateToProps({ video }) {
   return { video };

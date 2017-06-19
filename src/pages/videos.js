@@ -14,10 +14,16 @@ const videosID = [
   'NpwcGyTo0UA'
 ];
 
-const url = `https://www.youtube.com/embed/NpwcGyTo0UA`;
+const url = `https://www.youtube.com/embed/`;
 
 
 class Videos extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      selected: 'NpwcGyTo0UA'
+    }
+  }
 
 
   componentDidMount() {
@@ -32,14 +38,14 @@ class Videos extends Component {
         <NavBar />
         <div className="video-detail col-sm-8">
           <div className ="embed-responsive embed-responsive-16by9">
-            <iframe className="embed-responsive-item" src={url}></iframe>
+            <iframe className="embed-responsive-item" src={`${url}${this.state.selected}`}></iframe>
           </div>
           <div className="details">
             <h4> Liderança: O equilíbiro entre Resiliência e Tenacidade</h4>
             <div>No vídeo se faz uma analogia entre os conceitos da "resiliência" e "tenacidade" no campo da engenharia mecânica, com tais conceitos no contexto da liderança e ambiente de trabalho. Apresentando aspectos importantes na busca da harmonia entre a pressão no ambiente do trabalho com a vida pessoal.</div>
           </div>
         </div>
-        <VideoList  />
+        <VideoList onVideoClick = { selected => this.setState({selected}) } />
       </div>
     );
   }
