@@ -7,7 +7,6 @@ import VideoListItem from './video-list-item';
 const VideoList = (props) => {
 
   const videoItems = props.video.map( video => {
-    console.log(video)
     return (
       <VideoListItem
         key={video.etag}
