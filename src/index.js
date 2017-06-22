@@ -31,7 +31,7 @@ ReactDOM.render(
         <Route exact path="/article/:articleId" component={ArticleRead} />
         <Route exact path="/books" component={Books} />
         <Route exact path="/videos" component={Videos} />
-        <Route exact path="/album" component={Album} />
+        <Route exact path="/mural" component={Album} />
       </Switch>
     </BrowserRouter>
   </Provider>
