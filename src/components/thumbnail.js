@@ -1,26 +1,56 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Pictures from "../db/mural.json";
+import AlbumModal from './album-modal';
+import _ from 'lodash';
 
-const Thumbnail = (props) => {
+class Thumbnail extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
 
-  const handleClick = () => {
-    props.handleClick()
+    }
   }
 
+  handleClick(e) {
+    let element = e.currentTarget.children[0].childNodes[0];
+    this.setState({
+      pictureID: element.id
+    });
+    this.setState({
+      showModal: true
+    })
+  }
 
+  get getPictures() {
+    let picture = _.find(Pictures, {id: Number(this.state.pictureID)})
+    return picture;
+  }
 
-  return (
-    <div className="flex-parent">
-      <div className="flex-album-item">
-        <div className="thumbnail" onClick={ handleClick } >
-          <img src={`https://static.wixstatic.com/media/f9ad96_4342d3d6e8ca484fa7365d6cdf1ef4a2~mv2.jpg/v1/fill/w_1200,h_1200,q_85,usm_0.66_1.00_0.01/f9ad96_4342d3d6e8ca484fa7365d6cdf1ef4a2~mv2.jpg`} alt="..." className="img-album"/>
-          <div className="caption">
-            <h3> Palestra Raizen </h3>
+    render(){
+      const items = Pictures.map( obj => {
+        const cover = obj.cover;
+        const title = obj.title;
+        const id = obj.id;
+        return (
+          <div key={id} className="flex-album-item" onClick={ this.handleClick.bind(this) } >
+            <div className="thumbnail" >
+              <img src={cover} alt="..." className="img-album" id={id}/>
+              <div className="caption">
+                <h3> {title} </h3>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        );
+      });
 
-    </div>
-  );
+      return (
+        <div className="flex-parent">
+          {items}
+        <AlbumModal  picture={this.getPictures} open={this.state.showModal} close={ () => {this.setState({showModal: false})} } />
+        </div>
+      );
+    }
 }
+
 
 export default Thumbnail;
