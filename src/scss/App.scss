@@ -7,6 +7,12 @@ font-weight: 400;
 src: local('Vibur'), local('Vibur'), format('ttf');
 }
 
+@font-face {
+font-family: 'Roboto Slab';
+font-weight: 700;
+src: local('./fonts/Roboto_Slab'), local('./fonts/Roboto_Slab'), format('ttf');
+}
+
 .jumbotron {
   background-color: #101823;
   margin: 0 auto;
@@ -17,11 +23,12 @@ src: local('Vibur'), local('Vibur'), format('ttf');
 
 .img-responsive.home-img {
   zoom: 2;
-  filter: blur(1.5px);
+  // filter: blur(1.5px);
   display: block;
   margin: auto;
   border-radius: 4px;
   height: auto;
+  // max-height: 30vh;
   max-width: 100%;
 }
 
@@ -35,12 +42,14 @@ src: local('Vibur'), local('Vibur'), format('ttf');
 }
 
 .article-title {
-  color: #fcf8e3;
-  font-family: 'Vibur', cursive;
-  font-size: 56px;
-  top: 75vh;
-  left: 20vw;
-  position: absolute;
+  // color: #fcf8e3;
+  color: white;
+  font-family: 'Roboto Slab';
+  font-size: 32px;
+  vertical-align: center;
+  top: 50vh;
+  left: 50vw;
+  // position: absolute;
 }
 
 .example-appear {

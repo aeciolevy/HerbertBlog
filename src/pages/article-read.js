@@ -12,9 +12,30 @@ class ArticleRead extends Component {
     return this.props.match.params.articleId;
   }
 
+
   render(){
 
     const article = _.find(articleData, obj => obj.id == this.articleID())
+    const articleContent = article.content.map( obj => {
+      const text = obj.text;
+      const img = obj.img;
+      return (
+        <div key={img}>
+        <article>
+        {text.map( (elem, index) => {
+          return (
+            <span key={index}>
+              {elem}
+              <br />
+            </span>
+          );
+          })
+        }
+        </article>
+        {img ? <img src={img} alt="First" className="img-responsive img-1" /> : null}
+        </div>
+      );
+    })
 
     return (
       <div>
@@ -22,15 +43,8 @@ class ArticleRead extends Component {
         <div className="big-container">
           <main>
             <h2> {article.title} </h2>
-            <p className="date-smaller"> 02/03/2017 | Herbert Ricardo Viana Garcia </p>
-            <article>
-              {article.content1}
-            </article>
-            <img src={`https://static.wixstatic.com/media/f9ad96_a6b584cf33d848149598eac4cf17c3f5~mv2.png/v1/fill/w_960,h_540,al_c/f9ad96_a6b584cf33d848149598eac4cf17c3f5~mv2.png`} alt="First" className="img-responsive img-1" />
-            <article>
-              {article.content2}
-            </article>
-            <img src={article.images} alt="Second" className="img-responsive img-2" />
+            <p className="date-smaller"> {article.date}  </p>
+            {articleContent}
           </main>
         </div>
       </div>

@@ -13,6 +13,18 @@
   border-radius: 4px;
   }
 
+.flex-preview-parent {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.flex-preview-child {
+  height: 20vh;
+  width: 60vw;
+  margin: 0 0 0 0;
+}
+
 .list-group-item {
   padding: 10px;
   margin-top: 20px;
@@ -27,6 +39,9 @@
 
 .list-img {
   max-width: 140px;
+  width: 120px;
+  height: 100px;
+  max-height: 100px;
   float: left;
   padding: 0 10px 0 0;
 }
@@ -38,7 +53,7 @@
 .big-container {
   background-color: white;
   height: auto;
-  padding: 0 200px 0 200px;
+  padding: 0 200px 10px 200px;
 }
 
 .date-smaller {

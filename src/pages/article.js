@@ -1,38 +1,48 @@
 import React, { Component } from 'react';
 import NavBar from '../components/navbar';
-import { Link } from 'react-router-dom';
 import fakeArticle from '../db/article.json';
-
+import Preview from '../components/article-preview';
 
 class Article extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      article: fakeArticle
+    };
+  }
+
+  handleClick = e => {
+    let name = e.target.name
+    let article = fakeArticle.reduce( (accu, current) => {
+      if (current.tag === name){
+        return accu.concat(current)
+      }
+      return accu
+    }, []);
+    this.setState({article});
+  }
 
   render(){
-    const id = fakeArticle[0].id;
+
+    const log = fakeArticle.reduce( (accu, current) => current.tag === 'logistica' ? accu + 1:  accu + 0, 0);
+    const lid = fakeArticle.reduce( (accu, current) => current.tag === 'lideranca' ? accu + 1:  accu + 0, 0);
+    const pcm = fakeArticle.reduce( (accu, current) => current.tag === 'Planejamento e Controle da Manuntenção' ? accu + 1:  accu + 0, 0);
+
     return (
       <div>
         <NavBar />
         <div className="flex-button">
-          <button className="flex-child" type="button">
-            Logística <span className="badge">0</span>
+          <button className="flex-child" name="logistica" type="button" onClick={this.handleClick}>
+            Logística <span className="badge">{log}</span>
           </button>
-          <button className="flex-child" type="button">
-            Liderança <span className="badge">1</span>
+          <button className="flex-child" name="lideranca" type="button" onClick={this.handleClick}>
+            Liderança <span className="badge">{lid}</span>
           </button>
-          <button className="flex-child" type="button">
-            PCM <span className="badge">0</span>
+          <button className="flex-child" name="Planejamento e Controle da Manuntenção" type="button" onClick={this.handleClick}>
+            Planejamento e Controle da Manutenção <span className="badge">{pcm}</span>
           </button>
         </div>
-        <div className="col-md-6 col-md-offset-3 list-group">
-          <Link to={`article/${id}`} className="list-group-item effect8">
-            <h3 className="list-group-item-heading">{fakeArticle[0].title}</h3>
-            <img src={fakeArticle[0].images} className="list-img" alt="img"/>
-            <p className="list-group-item-text">
-              Este post trata-se de uma continuação do post "Você é Resiliente ou Tenaz? ”, publicado no blog em 03/02/2017.
-              Quem não desejaria ser imune às pressões do trabalho? Este deve ser o desejo de 10 em cada 10 líderes no mundo corporativo, esta “imunidade” seria análoga...
-            </p>
-          </Link>
-
-        </div>
+        <Preview data={this.state.article} />
       </div>
     );
   }

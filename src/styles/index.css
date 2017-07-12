@@ -4,6 +4,11 @@
   font-weight: 400;
   src: local("Vibur"), local("Vibur"), format("ttf"); }
 
+@font-face {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  src: local("./fonts/Roboto_Slab"), local("./fonts/Roboto_Slab"), format("ttf"); }
+
 .jumbotron {
   background-color: #101823;
   margin: 0 auto;
@@ -13,7 +18,6 @@
 
 .img-responsive.home-img {
   zoom: 2;
-  filter: blur(1.5px);
   display: block;
   margin: auto;
   border-radius: 4px;
@@ -29,12 +33,12 @@
   position: absolute; }
 
 .article-title {
-  color: #fcf8e3;
-  font-family: 'Vibur', cursive;
-  font-size: 56px;
-  top: 75vh;
-  left: 20vw;
-  position: absolute; }
+  color: white;
+  font-family: 'Roboto Slab';
+  font-size: 32px;
+  vertical-align: center;
+  top: 50vh;
+  left: 50vw; }
 
 .example-appear {
   opacity: 0.01;
@@ -107,6 +111,16 @@
   border: 2px solid #777777;
   border-radius: 4px; }
 
+.flex-preview-parent {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+
+.flex-preview-child {
+  height: 20vh;
+  width: 60vw;
+  margin: 0 0 0 0; }
+
 .list-group-item {
   padding: 10px;
   margin-top: 20px;
@@ -119,6 +133,9 @@
 
 .list-img {
   max-width: 140px;
+  width: 120px;
+  height: 100px;
+  max-height: 100px;
   float: left;
   padding: 0 10px 0 0; }
 
@@ -128,7 +145,7 @@
 .big-container {
   background-color: white;
   height: auto;
-  padding: 0 200px 0 200px; }
+  padding: 0 200px 10px 200px; }
 
 .date-smaller {
   font-size: 10px;
