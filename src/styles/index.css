@@ -220,7 +220,8 @@
   justify-content: space-around; }
 
 img.img-album {
-  max-width: 25vw; }
+  max-width: 25vw;
+  max-height: 60vh; }
 
 body {
   margin: 0;

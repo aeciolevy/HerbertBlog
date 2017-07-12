@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import { Button, Carousel, Modal } from 'react-bootstrap';
 import Pictures from "../db/mural.json"
@@ -11,7 +12,7 @@ const AlbumModal = (props) => {
       </Carousel.Item>
     );
   }) : null;
-  console.log(props.picture)
+  console.log(pictures)
   return (
     <div className="static-modal" >
 
@@ -20,9 +21,7 @@ const AlbumModal = (props) => {
             <Modal.Title>{props.picture ? props.picture.title : ''}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Carousel>
-            {pictures}
-            </Carousel>
+            {_.isEmpty(pictures) ?  <p> Fotos em breve!!! </p> : <Carousel> {pictures} </Carousel>}
           </Modal.Body>
       </Modal>
     </div>
