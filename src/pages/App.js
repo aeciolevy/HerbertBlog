@@ -21,12 +21,12 @@ class App extends Component {
       // <button className=" btn btn-primary-outline"> Leia Mais </button>
       return (
         <Carousel.Item key={id}>
-          <img alt="900x500" src={img} className="img-responsive home-img"/>
-          <Carousel.Caption>
-            <Link to={`article/${id}`} >
-              <h5 className="article-title"> {title} </h5>
-            </Link>
-          </Carousel.Caption>
+          <Link to={`article/${id}`} >
+            <img alt="900x500" src={img} className="img-responsive home-img"/>
+            <Carousel.Caption>
+                <h5 className="article-title"> {title} </h5>
+            </Carousel.Caption>
+          </Link>
         </Carousel.Item>
       );
     })

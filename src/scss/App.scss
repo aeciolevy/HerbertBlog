@@ -27,8 +27,8 @@ src: local('./fonts/Roboto_Slab'), local('./fonts/Roboto_Slab'), format('ttf');
   display: block;
   margin: auto;
   border-radius: 4px;
-  height: auto;
-  // max-height: 30vh;
+  // height: auto;
+  max-height: 300px;
   max-width: 100%;
 }
 

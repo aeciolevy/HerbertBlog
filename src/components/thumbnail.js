@@ -34,7 +34,7 @@ class Thumbnail extends Component {
         return (
           <div key={id} className="flex-album-item" onClick={ this.handleClick.bind(this) } >
             <div className="thumbnail" >
-              <img src={cover} alt="..." className="img-album" id={id}/>
+              <img src={cover} alt="..." className="img-responsive img-album" id={id}/>
               <div className="caption">
                 <h3> {title} </h3>
               </div>

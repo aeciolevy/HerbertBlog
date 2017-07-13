@@ -2,6 +2,7 @@
   "name": "herbert",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aeciolevy.github.io/HerbertBlog/.",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "lodash": "^4.17.4",
