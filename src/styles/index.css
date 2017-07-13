@@ -54,12 +54,7 @@
   src: local("Patrick Hand SC"), local("Patrick Hand SC"), format("ttf"); }
 
 .about-container {
-  background-image: url("../img/herbert.jpg");
-  background-size: 100vw 100vh;
   width: 100vw;
-  height: 90vh;
-  box-shadow: inset 0 0 0 1000px rgba(16, 24, 35, 0.93);
-  padding: 10px 60px 10px 60px;
   margin: 0; }
 
 .about-title {
@@ -228,6 +223,5 @@ img.img-album {
 body {
   margin: 0;
   padding: 0;
-  padding-top: 70px;
   background-color: #101823;
   font-family: sans-serif; }
