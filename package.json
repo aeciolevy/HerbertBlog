@@ -2,7 +2,7 @@
   "name": "herbert",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aeciolevy.github.io/HerbertBlog/",
+  "homepage": "www.herbertviana.com",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "gh-pages": "^1.0.0",
