@@ -18,8 +18,9 @@ src: local('Patrick Hand SC'), local('Patrick Hand SC'), format('ttf');
 .about-title {
   color: #777777;
   font-family: 'Patrick Hand SC', cursive;
+  font-size: 40px;
   padding: 0;
-  margin: 0 auto;
+  margin-top: 90px;
   text-align: center;
 }
 
@@ -33,10 +34,12 @@ src: local('Patrick Hand SC'), local('Patrick Hand SC'), format('ttf');
   flex-flow: row wrap;
   justify-content: space-around;
   align-content: center;
+  max-width: 50vw;
+  padding-top: 10px;
 }
 
 .flex-item {
-  margin: 10px 0 0 60px;
+  margin: 10px 0 0 40px;
   flex-basis: 0;
   flex-grow: 1;
   align-self: stretch;
@@ -58,4 +61,13 @@ src: local('Patrick Hand SC'), local('Patrick Hand SC'), format('ttf');
   display: block;
   color: #777777;
   padding: 10px 0 0 0;
+}
+
+.about-appear {
+  opacity: 0;
+  transition: 0.9s ease-in all;
+}
+
+.about-appear-active {
+  opacity: 1;
 }

@@ -41,8 +41,8 @@
   left: 50vw; }
 
 .example-appear {
-  opacity: 0.01;
-  transition: opacity .9s ease-in; }
+  right: 100px; }
 
-.example-appear.example-appear-active {
-  opacity: 1; }
+.example-appear-active {
+  right: 0px;
+  transition: 1.2s ease-in all; }
