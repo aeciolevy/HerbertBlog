@@ -13,6 +13,17 @@ font-weight: 700;
 src: local('./fonts/Roboto_Slab'), local('./fonts/Roboto_Slab'), format('ttf');
 }
 
+@font-face {
+font-family: 'Indie Flower';
+font-style: cursive;
+src: local('./fonts/Indie+Flower'), local('./fonts/Indie_Flower'), format('ttf');
+}
+
+
+.finish{
+  visibility: hidden;
+}
+
 .jumbotron {
   background-color: #101823;
   margin: 0 auto;
@@ -21,16 +32,6 @@ src: local('./fonts/Roboto_Slab'), local('./fonts/Roboto_Slab'), format('ttf');
   padding: 0;
 }
 
-.img-responsive.home-img {
-  zoom: 2;
-  // filter: blur(1.5px);
-  display: block;
-  margin: auto;
-  border-radius: 4px;
-  // height: auto;
-  max-height: 300px;
-  max-width: 100%;
-}
 
 .btn-primary-outline {
   background-color: #fcf8e3;
@@ -39,6 +40,28 @@ src: local('./fonts/Roboto_Slab'), local('./fonts/Roboto_Slab'), format('ttf');
   top: 88vh;
   left: 48vw;
   position: absolute;
+}
+
+h1.title-page {
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  margin-top: 40px
+  }
+
+.img-responsive.picture {
+  margin: auto;
+  border-radius: 4px;
+  -webkit-animation: fadeinout 4s linear forwards;
+  animation: fadeinout 4s linear forwards;
+}
+
+
+
+@keyframes fadeinout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 .article-title {
@@ -52,11 +75,28 @@ src: local('./fonts/Roboto_Slab'), local('./fonts/Roboto_Slab'), format('ttf');
   // position: absolute;
 }
 
-.example-appear {
-  right: 100px;
+.flex-home{
+  transform: translate(0,50%);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
 }
 
-.example-appear-active {
-  right: 0px;
-  transition:  1.2s ease-in all;
+.flex-home-child {
+  max-height: 180px;
+  max-width: 170px;
+  margin: 0 0 0 50px;
+  flex-basis: 0;
+  flex-grow: 1;
+  align-self: stretch;
 }
+
+// .example-appear {
+//   opacity: 0.01;
+//   transition: opacity 1.5s linear;
+// }
+
+// .example-appear-active {
+//   opacity: 1;
+// }
