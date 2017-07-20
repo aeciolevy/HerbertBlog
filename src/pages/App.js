@@ -73,7 +73,7 @@ class App extends Component {
         <div className="jumbotron" >
          { this.state.classHide ?
           <div>
-          <h2 style={{textAlign: 'center', padding: '40px 0 0 0'}}> Meus últimos artigos </h2>
+          <h2 style={{textAlign: 'center', padding: '40px 0 0 0', color:'beige'}}> Meus últimos artigos </h2>
           <div className="flex-home">
             {articles}
           </div>
